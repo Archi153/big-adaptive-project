@@ -4,127 +4,362 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be am</title>
+    <title>Herbs</title>
     <link rel="stylesheet" href="styles.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
 </head>
 
 <body>
+    <a name="top"></a>
+    <div class="search_hub" id="search_hub">
+        <div class="container">
+        <button class="close top" onclick="close_search_hub()">X</button>
+          <p class="searching">Поиск по сайту:</p>
+          <div class="action_group">
+            <input type="text" placeholder="например, пробирки">
+            <button class="search">
+                <p>найти</p>
+                <img src="./icons/right-arrow.png" alt="">
+            </button>
+          </div>
+
+          <button class="close bottom" onclick="close_search_hub()">X</button>
+        </div>
+      </div> 
     <div class="header"> 
         <nav>
             <div class="container">
-                <ul class="menu">
-                    <div class="circles">
-                        <div class="circle_1"></div>
-                        <div class="circle_2"></div>
-                        <div class="circle_3"></div>
-                    </div>
-                    <li class="menu_item_1"><a href="https://onlypb.pochtabank.ru/mobilemir" class="menu_link">Main</a></li>
-                    <li class="menu_item_2"><a href="#" class="menu_link" >Ru <s>driil</s> blog</a></li>
-                    <li class="menu_item_3"><a href="#" class="menu_link">Information</a></li>
-                    <li class="menu_item_4"><a href="#education" class="menu_link">Education</a></li>
-                    <li class="menu_item_5"><a href="#contacts" class="menu_link">Contacts</a></li>
-
-                </ul>
-                <div class="line"></div>
                 
+                <div class="logo"><img src="./icons/logo.png" alt=""></div>
+                <ul class="menu">  
+
+                    <li class="menu_item_1"><a href="#" class="menu_link">Каталог</a></li>
+                    <li class="menu_item_2"><a href="#" class="menu_link" >Это интересно</a></li>
+                    <li class="menu_item_3"><a href="#" class="menu_link">Новости</a></li>
+                    <li class="menu_item_4"><a href="#" class="menu_link">Вопрос-ответ</a></li>
+                    <li class="menu_item_5"><a href="#" class="menu_link">Специлистам</a></li>
+                    <li class="menu_item_6"><a href="#" class="menu_link">Где купить</a></li>
+                    <li class="menu_item_7"><a href="#" class="menu_link">Контакты</a></li>
+                </ul> 
+                <div class="phone-group">
+                    <p class="phone-number">8 (495) 969-21-84</p>
+                    <button class="phone"><img src="./icons/phone.png" alt=""></button>
+                </div>
+ 
+                <button class="loupe" onclick="open_search_hub()"><img src="./icons/loupe.png" alt=""></button> 
+                 
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                      <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <li><a class="menu__item " href="#" id="first" onclick="group()">Каталог</a></li>
+                        <div class="additional" id="additional">
+                            <li><a class="menu__item add" href="#">Пробиотики</a></li>
+                            <li><a class="menu__item add" href="#">Минеральные соли</a></li>
+                            <li><a class="menu__item add"  href="#">Витаминные комплексы</a></li>
+                            <li><a class="menu__item add" href="#">Морская вода</a></li>
+                        </div>   
+                        <li><a class="menu__item" href="#">Это интересно</a></li>
+                        <li><a class="menu__item" href="#">Новости</a></li>
+                        <li><a class="menu__item" href="#">Вопрос-ответ</a></li>
+                        <li><a class="menu__item" href="#">Специлистам</a></li>
+                        <li><a class="menu__item" href="#">Где купить</a></li>
+                        <li><a class="menu__item" href="#">Контакты</a></li>
+                    </ul>
+                </div>        
             </div>
         </nav>
     </div>
-    
-    <div class="lg">
-        <div class="contaner">
-            
-            <div class="name">
-                <div class="t_1">
-                    Bogdanov Andrey
-                </div>
-                <div class="t_2">
-                    Frontend Developer                        
-                </div>
+    <div class="hero-section">
+        <div class="container">
+           <button class="feedback" onclick="open_feedback_form()"><p>Обратная связь</p> <img src="./icons/letter.svg" alt="" class="letter"></button>
+
+           <div class="feedback_form" id="feedback_form">
+             <div class="container">
+               <button class="close" onclick="close_feedback_form()">
+                    <p>X</p><img src="./icons/Union.svg" alt="">
+                </button>
+               <p class="feedback_title">Обратная связь</p>
+           
+               <input type="name" class="name" placeholder="Имя*" required>
+           
+               <input type="email" class="email" required placeholder="E-mail">
+           
+               <input type="phone" placeholder="Телефон" class="phone_number" required>
+               <input type="text" placeholder="Сообщение" class="message">
+               <div class="accept">
+                 <input type="checkbox" class="checkbox" id="Checkbox">
+                 <p class="accept_of">Согласие на обработку персональных данных и с Политикой конфиденциальности</p>
+               </div>
+               
+               <button class="send" id="send" disabled> отправить</button>
+               <div class="necessarilly">
+                <p class="star">*</p><p class="rqst"> Поля, обязательные для заполнения</p>
+               </div>
+               
+
+             </div>
+           </div>
+
+            <h1 class="imune">Укрепляем иммунитет <br>
+                вместе </h1>
+            <p>Новая формула содержит комплекс пробиотиков, обогащенный цинком и лактоферрином</p>
+            <button class="action">Узнать больше</button>
+            <div class="group">
+                <button class="pol_btn" id="pol_btn">01</button>
+                <button class="pol_btn" id="pol_btn">02</button>
+                <button class="pol_btn" id="pol_btn">03</button>
             </div>
-            <div class="line"></div>
         </div>
     </div>
+    <div class="about">
+        <img src="./icons/YellowEllipse.svg" alt="" class="icons el">
+        <h2 class="aboutCo">О компании</h2>
 
-    <div class="Main">
+        <img src="./icons/GreenPolygon.svg" alt=""class="icons hex">
+
         <div class="container">
-            <div class="line"></div>
-            <div class="photo">
-               
-            </div>
-            <div class="inf">  
-                Oh yeah it's me...  My name is Andrey, i'm from Russia, and i'm a frontend developer. i've been doing this for 3 years. 
-                This is such an interesting story about my journey in the frontend. It started when I was in the 11th grade, then I met a Junior frontend developer who was almost 36 years old, he started doing this when he was 35 and I realized that if people can change their lives at that age, then I can learn something. He showed me some projects and I got interested in it. After some time, I started learning the basics of html and css. I still look at it like for the first time
+            <div class="advantage">
+                <div class="headline first">
+                    <img src="./icons/about-01.svg" alt="">
+                    <p class="about_txt">Натуральные ингредиенты</p>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="headline second">
+                    <img src="./icons/about-02.svg" alt="">
+                    <p class="about_txt">Европейское производство</p>
+                </div>
+
+                <div class="line"></div>
+                
+                <div class="headline third">
+                    <img src="./icons/about-03.svg" alt="">
+                    <p class="about_txt">Состав, подобранный
+                        под возрастную группу</p>
+                </div>
+                
+                <div class="line"></div>
+                
+                <div class="headline fourth">
+                    <img src="./icons/about-04.svg" alt="">
+                    <p class="about_txt">Уникальный состав каждого продукта</p>
+                </div>
             </div>
 
+            <div class="inf">
+                <p class="prod">Наша продукция разработана с учетом изменения потребностей ребенка от момента зачатия до подросткового возраста, и является лучшим решением всех проблем, с которыми родители и педиатры сталкиваются каждый день. Постоянный поиск инновационных формул, технологий использования современных производственных процессов, информаций и научных исследований позволяют нам создавать качественные продукты, ориентированные на потребности детей.</p>
+                <p class="about_prod">Продукция производится на крупнейших заводах Европы. Технология и условия производства соответствуют высшим международным стандартам качества в фармацевтической промышленности — GMP (Good Manufacturing Practices).</p>
+                <p class="about_prod">Продукция создана на основе натуральных биологически-активных веществ: лактобактерий, витаминов, минералов и экстрактов целебных растений, подобранных в оптимальных дозировках и сочетаниях, прошла лабораторные исследования на территории РФ и рекомендована к применению ФГБНУ НИИ питания РАМН РФ.</p>
+                <div class="more_about">
+                    <button class="more">подробнее</button>
+                    <img src="./icons/BluePolygon.svg" alt="" class="icons triangle">
+                </div>
+            </div>
         </div>
-    </div> 
-
-    <div class="education">
-        <div class="container">
-            <div class="line"></div>
-            <div class="h"><a name="education"></a> Education</div>
-            <div class="gr">
-                <div class="child1">
-                    <div class="tsu">Tula State University</div>
-                    <div class="ts_1">Applied computer science in economics</div>
-                    <div class="date_1">2021-2025</div>
-                    <div class="ts_2">Data analytics</div>
-                    <div class="date_3">2022-2023</div>
+    </div>
+    <div class="catalog">
+        <p class="production">каталог продукции</p>
+        <div class="prob">
+            <div class="container">
+                <div class="gr">
+                    <img src="./icons/product-01.svg" alt="" class="bact">
+                    <p class="title">Пробиотики</p>
+                    <button class="arrow"><img src="./icons/arrow.svg" alt=""></button>
                 </div>
-                <div class="child2">
-                    <div class="cdm">Codemasters</div>
-                    <div class="cm">Advanced Frontend ingineering</div>
-                    <div class="date_2">2022-2023</div>
-                </div>
+                <p class="sub-inf">Продукты, содержащие как пробиотики, 
+                    так и пребиотики, оказывающие положительное влияние на состояние здоровья</p>
             </div>
+            <img src="./img/box.svg" alt="" class="box">
+            <button class="see_more">Посмотреть</button>
+
+        </div>  
+        <div class="sault">
+            <div class="container">
+                <div class="gr">
+                    <img src="./icons/product-02.svg" alt="" class="bact">
+                <p class="title">Минеральные соли</p>
+                <button class="arrow"><img src="./icons/arrow.svg" alt=""></button>
+                </div>
+                
+                <p class="sub-inf">Входя в состав всех клеток, тканей и органов человеческого тела, играют важную роль в жизнедеятельности организма.</p>
+            </div>
+
+            <img src="./img/box.svg" alt="" class="box">
+            <button class="see_more">Посмотреть</button>
+        </div>   
+        <div class="vitamins">
+            <div class="container">
+                <div class="gr">
+                    <img src="./icons/product-03.svg" alt="" class="bact">
+                    <p class="title"> Витаминные комплексы</p>
+                    <button class="arrow"><img src="./icons/arrow.svg" alt=""></button>
+                </div>
+    
+                <p class="sub-inf">Избежать гиповитаминоза можно с помощью приема витаминных комплексов. </p>
+            </div>
+
+            <img src="./img/box.svg" alt="" class="box">
+            <button class="see_more">Посмотреть</button>
+        </div>  
+        <div class="water">
+            <div class="container">
+                <div class="gr">
+                    <img src="./icons/product-04.svg" alt="" class="bact">
+                    <p class="title"> Морская вода</p>
+                    <button class="arrow"><img src="./icons/arrow.svg" alt=""></button>
+                </div>
+    
+                <p class="sub-inf">Содержит такие полезные минералы, как магний, натрий, кальций, хлорид и сульфат, которые оказывают благотворное влияние на кожу. </p>
+            </div>
+
+            <img src="./img/box.svg" alt="" class="box">
+            <button class="see_more">Посмотреть</button>
         </div>  
     </div>
+    <div class="news">
+        <img src="./icons/GreenPolygon.svg" alt="" class="icons hex">
+        <div class="slider">
+            <div class="tit">
+                <p class="nws">Новосоти</p>
+                <div class="btns">
+                    <button class="slider-prev"><img src="./icons/arrow-left.svg" alt="prev"></button>
+                    <button class="slider-next"><img src="./icons/arrow-right.svg" alt="next"></button>
+                </div>
+                <img src="./icons/BluePolygon.svg" alt="" class="icons triangle">
+            </div>
 
-    <div class="contacts">
-        <div class="container">
-            <div class="line"></div>
-            <div class="speach">
-                LET'S SPEAK :)
-            </div>
-            <div class="dev">
-                <div class="d">
-                    Developed by:
+            <div class="slider-line">
+                <img src="./icons/YellowEllipse.svg" alt="" class="icons el">
+                
+                <div class="slider-item">
+                    <img src="./img/news_1.png" alt="" class="card">
+                    <p class="date">09.06.2021</p>
+                    <p class="slider-title">Современные пробиотики: виды и польза</p>
+                    <p class="slider-text">Современные аптечные сети предлагают огромный выбор препаратов для профилактики дисбактериоза. Какие комплексы лучше и в чем их польза?</p>
+                 </div>
+                <div class="slider-item"> 
+                    <img src="./img/news_2.png" alt="" class="card">               
+                    <p class="date">09.06.2021</p>
+                    <p class="slider-title">Как узнать, что микрофлора кишечника нарушена?</p>
+                    <p class="slider-text">Боли в животе, запоры и вздутие — те проблемы, о которых не принято говорить вслух. Однако эти симптомы могут говорить о начале дисбактериоза.</p>
                 </div>
-                <div class="name">
-                     Andrey Bogdanov
+                <div class="slider-item">
+                    <img src="./img/news_3.png" alt="" class="card">                
+                    <p class="date">09.06.2021</p>
+                    <p class="slider-title">Дисбактериоз после родов: причины и решение проблемы</p>
+                    <p class="slider-text">После родов многие женщины сталкиваются с нарушением баланса кишечной микрофлоры. Как решить эту проблему?</p>
                 </div>
-            </div>
-            <div class="design">
-                <div class="d">
-                    Designed by:
-                </div>
-                <div class="name">
-                    Andrey Bogdanov
-                </div>
-            </div>
-          
-            <div class="socials">
-                <div class="soc">
-                    <a name="contacts"></a>
-                    Socials
-                </div>
-                <div class="btn">
-                    <a href = "#" class="inst">
-                         Instagram
-                    </a>
-                    <a href = "#" class="git">
-                        GIT
-                    </a>
-                    <a href = "#" class="Vk">
-                        VK
-                    </a>
-                </div>    
             </div>
         </div>
     </div>
 
+
+    <div class="specialist">
+        <div class="slider">
+            <p class="spec">Специлистам</p>
+            <button class="second_slider-prev"><img src="./icons/arrow-left.svg" alt="prev"></button>
+            <button class="second_slider-next"><img src="./icons/arrow-right.svg" alt="next"></button>
+            <div class="second_slider-line">
+                <div class="slider-item first">
+                    <img src="./img/leaf.png" alt="" class="leaf">
+                    <p class="date">08.06.2021</p>
+
+                    <p class="slider-text">Современные аптечные сети предлагают огромный выбор препаратов для профилактики дисбактериоза. Какие комплексы лучше и в чем их польза?</p>
+                    <button class="see_more">Посмотреть</button>
+                 </div>
+                <div class="slider-item second">              
+                    <p class="date">04.06.2021</p>
+                    <p class="slider-text">Новые представления о функциональных расстройствах кишечника и место современных пробиотиков в их лечении.</p>
+                    <button class="see_more">Посмотреть</button>
+                </div>
+                <div class="slider-item third">              
+                    <p class="date">08.06.2021</p>
+                    <p class="slider-text">Штаммоспецифичность пробиотиков. XVIII Съезд педиатров России с международным участием «Актуальные проблемы педиатрии».</p>
+                    <button class="see_more">Посмотреть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel">
+        <div class="marquee-infinite">
+            <div>
+                <span>
+
+                    <img src="./img/logo_3.svg" alt="">
+                    <img src="./img/logo_4.svg" alt="">
+                    <img src="./img/logo_5.svg" alt="">
+                    <img src="./img/logo_6.svg" alt="">
+                </span>
+                <span>
+
+                    <img src="./img/logo_3.svg" alt="">
+                    <img src="./img/logo_4.svg" alt="">
+                    <img src="./img/logo_5.svg" alt="">
+                    <img src="./img/logo_6.svg" alt="">
+
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="connect">
+           <div class="top-footer">
+            <div class="soc-cl">
+                <p class="subscribe_title">
+                    Подпишитесь на рассылку новостей Herbs, чтобы получать эксклюзивный контент, предложения и скидки! 
+                </p>
+                <div class="subscribe_group">
+                    <input type="email" class="email" placeholder="EMAIL">
+                    <button class="subscribe"><p>Подписаться</p><img src="./icons/right-arrow.png" alt="" class="right_arrow"> </button>
+                </div>   
+                <div class="socials">
+                    <button class="vk"><img src="./icons/vk.png" alt=""></button>
+                    <button class="ok"><img src="./icons/ok.png" alt=""></button>
+                    <button class="fb"><img src="./icons/fb.png" alt=""></button>
+                    <button class="inst"><img src="./icons/inst.png" alt=""></button>
+                    <button class="twt"><img src="./icons/tw.png" alt=""></button>
+                    <button class="yt"><img src="./icons/youtube.png" alt=""></button>
+                </div> 
+            </div>
+            
+            <div class="attachment">
+                <div class="cl1">
+                    <div class="attachment_item">Это интересно</div>
+                    <div class="attachment_item">Новости</div>
+                    <div class="attachment_item">Вопрос-ответ
+                    </div>
+                    <div class="attachment_item">Карта сайта</div>
+                    <div class="attachment_item">Специалистам</div>
+                    <div class="attachment_item">Где купить</div>
+                </div>
+                <div class="cl2">
+                    <div class="attachment_item">Контакты</div>
+                    <div class="attachment_item">Конфиденциальность</div>
+                    <div class="attachment_item">Каталог </div>
+                    <div class="sub_attachment_item">Пробиотики</div>
+                    <div class="sub_attachment_item">Минеральные соли</div>
+                    <div class="sub_attachment_item">Витаминные комплексы</div>
+                    <div class="sub_attachment_item">Морская вода</div>
+                </div>
+           </div>
+ 
+            </div>
+            <a href="#top" class="up">вверх</a>
+            <div class="founded">
+                <p class="comp">©  2008-2021 herbs</p>
+                <p class="adres">105000, Российская Федерация,
+                    г. Москва, ул. Бауманская 2-ая, д.7</p>
+                <p class="created">Разработка сайта - InterLabs</p>
+            </div>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
 </body>
 
 </html>

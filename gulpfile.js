@@ -25,6 +25,12 @@ function pages() {
         .pipe(bsInstance.stream());
 }
 
+function scripts(){
+    return gulp.src('app/scripts/*.js')
+        .pipe(gulp.dest(outputPath))
+        .pipe(bsInstance.stream());
+}
+
 function styles() {
     return gulp.src('app/*.scss')
         .pipe(sass())
@@ -36,11 +42,11 @@ function styles() {
 }
 
 function startwatch() {
-    gulp.watch('app/*.html').on('change', () => {
+    gulp.watch('./app/*.html').on('change', () => {
         pages();
         bsInstance.reload;
     });
-    gulp.watch('app/*.scss').on('change', () => {
+    gulp.watch('./app/*.scss').on('change', () => {
         styles();
         bsInstance.reload;
     });
