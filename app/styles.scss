@@ -2379,5 +2379,47 @@ button{
 
           /* feedback_form */
 
+.pol_btn{
+  &.first:focus{
+    background-image: url('../dist/icons/blue_polygon.png');
+    background-size:cover;
+    color:var(--white);
+  }
+  &.second:focus{
+    background-image: url('../dist/icons/blue_polygon.png');
+    background-size:cover;
+    color:var(--white);
+  }
+  &.third:focus{
+    background-image: url('../dist/icons/blue_polygon.png');
+    background-size:cover;
+    color:var(--white);
+  }
 
- 
+  &.first:hover{
+    background-image: url('../dist/icons/light_blue_polygon.png');
+    background-size:cover;
+    cursor: pointer;
+  }
+  &.second:hover{
+    background-image: url('../dist/icons/light_blue_polygon.png');
+    background-size:cover;
+    cursor: pointer;
+  }
+  &.third:hover{
+    background-image: url('../dist/icons/light_blue_polygon.png');
+    background-size:cover;
+    cursor: pointer;
+  }
+}
+.second_slide{
+  display: none;
+}
+.third_slide{
+  display: none;
+}
+.second_slider-prev{
+  margin-right: 16px;
+  margin-left: 10px;
+}
+

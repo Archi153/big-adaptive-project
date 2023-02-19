@@ -2143,3 +2143,46 @@ button {
 }
 
 /* feedback_form */
+.pol_btn.first:focus {
+  background-image: url("../dist/icons/blue_polygon.png");
+  background-size: cover;
+  color: var(--white);
+}
+.pol_btn.second:focus {
+  background-image: url("../dist/icons/blue_polygon.png");
+  background-size: cover;
+  color: var(--white);
+}
+.pol_btn.third:focus {
+  background-image: url("../dist/icons/blue_polygon.png");
+  background-size: cover;
+  color: var(--white);
+}
+.pol_btn.first:hover {
+  background-image: url("../dist/icons/light_blue_polygon.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.pol_btn.second:hover {
+  background-image: url("../dist/icons/light_blue_polygon.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.pol_btn.third:hover {
+  background-image: url("../dist/icons/light_blue_polygon.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.second_slide {
+  display: none;
+}
+
+.third_slide {
+  display: none;
+}
+
+.second_slider-prev {
+  margin-right: 16px;
+  margin-left: 10px;
+}

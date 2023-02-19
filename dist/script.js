@@ -1,11 +1,31 @@
+const f_slide = document.getElementById("first_slide")
+const s_slide = document.getElementById("second_slide")
+const t_slide = document.getElementById("third_slide")
 
-document.getElementById("pol_btn").onclick=change
+function fs(){
+    f_slide.style.display = "block";
+    s_slide.style.display = 'none';
+    t_slide.style.display = 'none';
+}
+function ss(){
+    f_slide.style.display = 'none';
+    s_slide.style.display = "block";
+    t_slide.style.display = 'none';
+}
+function ts(){
+    f_slide.style.display = 'none';
+    s_slide.style.display = 'none';
+    t_slide.style.display = "block";
+}
+
+
+/* document.getElementById("pol_btn").onclick=change
 function change(){
     this.classList.toggle("clicked");
     if(!this){
         this.classList.remove("clicked")
     }
-}
+} */
 
 function group(){
     var el =  document.getElementById("first")
